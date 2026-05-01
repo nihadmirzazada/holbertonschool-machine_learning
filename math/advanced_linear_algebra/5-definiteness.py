@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Calculates the definiteness of a matrix"""
 import numpy as np
- 
- 
+
+
 def definiteness(matrix):
     """Returns the definiteness of a matrix as a string, or None"""
     if not isinstance(matrix, np.ndarray):

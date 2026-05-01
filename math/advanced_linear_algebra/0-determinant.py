@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Calculates the determinant of a matrix"""
- 
- 
+
+
 def determinant(matrix):
     """Returns the determinant of a matrix"""
     if not isinstance(matrix, list):

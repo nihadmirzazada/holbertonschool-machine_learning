@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Calculates the inverse of a matrix"""
- 
- 
+
+
 def _det(m):
     """Helper determinant (no validation)"""
     n = len(m)
@@ -14,8 +14,8 @@ def _det(m):
         sub = [[m[i][k] for k in range(n) if k != j] for i in range(1, n)]
         det += ((-1) ** j) * m[0][j] * _det(sub)
     return det
- 
- 
+
+
 def inverse(matrix):
     """Returns the inverse of a matrix, or None if singular"""
     if not isinstance(matrix, list):
