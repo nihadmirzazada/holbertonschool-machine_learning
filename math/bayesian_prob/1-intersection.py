@@ -34,5 +34,8 @@ def intersection(x, n, P, Pr):
     if not np.isclose(Pr.sum(), 1):
         raise ValueError("Pr must sum to 1")
 
-    lk = __import__('0-likelihood').likelihood
-    return lk(x, n, P) * Pr
+    c = 1
+    for i in range(x):
+        c = c * (n - i) // (i + 1)
+    lk = float(c) * (P ** x) * ((1 - P) ** (n - x))
+    return lk * Pr

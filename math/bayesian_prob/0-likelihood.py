@@ -4,7 +4,7 @@ import numpy as np
 
 
 def likelihood(x, n, P):
-    """Calculate likelihood of obtaining data given hypothetical probs.
+    """Calculate likelihood of data given hypothetical probabilities.
 
     Args:
         x: patients with severe side effects
@@ -29,4 +29,4 @@ def likelihood(x, n, P):
     c = 1
     for i in range(x):
         c = c * (n - i) // (i + 1)
-    return c * (P ** x) * ((1 - P) ** (n - x))
+    return float(c) * (P ** x) * ((1 - P) ** (n - x))
