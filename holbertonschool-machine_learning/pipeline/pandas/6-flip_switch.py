@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+"""Sort in reverse chronological order and transpose"""
+import pandas as pd
+
+
+def flip_switch(df):
+    """Sort by index descending and transpose"""
+    return df.sort_index(ascending=False).transpose()
